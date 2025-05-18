@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Login - EMS</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+    <div class="auth-container">
+        <div class="auth-box">
+            <div class="auth-header">
+                <i class="fas fa-users"></i>
+                <h1>Company Login</h1>
+            </div>
+            <form id="login-form" class="auth-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div id="error-message" class="error-message" style="display: none; color: red; margin-bottom: 1rem;"></div>
+                <div class="form-actions">
+                    <button type="submit" class="btn primary">Login</button>
+                </div>
+                <p class="auth-switch">
+                    Don't have an account? <a href="register.html">Register your company</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="auth.js"></script>
+    <script>
+        // Check if already logged in
+        if (companyAuth.checkAuth()) {
+            window.location.href = 'index.html';
+        }
+
+        document.getElementById('login-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+            const submitButton = this.querySelector('button[type="submit"]');
+            
+            try {
+                // Disable submit button
+                submitButton.disabled = true;
+                submitButton.textContent = 'Logging in...';
+                
+                // Attempt login
+                const success = companyAuth.login(email, password);
+                
+                if (success) {
+                    // Store current company in session
+                    sessionStorage.setItem('currentCompany', JSON.stringify(companyAuth.getCurrentCompany()));
+                    
+                    // Redirect to dashboard
+                    window.location.href = 'index.html';
+                }
+            } catch (error) {
+                errorMessage.textContent = error.message;
+                errorMessage.style.display = 'block';
+                
+                // Re-enable submit button
+                submitButton.disabled = false;
+                submitButton.textContent = 'Login';
+            }
+        });
+    </script>
+</body>
+</html> 
