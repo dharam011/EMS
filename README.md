@@ -2,37 +2,36 @@
 
 A modern, responsive Employee Management System built with HTML, CSS, and JavaScript. This system allows you to manage employee information, track attendance, and generate reports - all without a backend server.
 
-## 🌟 Features / विशेषताएँ
+## 🌟 Features 
 
-### Core Features / मुख्य विशेषताएँ
+### Core Features 
 
-1. **Employee Management / कर्मचारी प्रबंधन**
+1. **Employee Management 
    - Add, edit, and delete employees
    - Store employee details including photo
    - Search and filter employees
 
-2. **Dashboard / डैशबोर्ड**
+2. **Dashboard 
    - View total employees
    - Track attendance
    - Department statistics
 
-3. **Attendance Tracking / उपस्थिति ट्रैकिंग**
+3. **Attendance Tracking 
    - Mark daily attendance
    - View attendance history
    - Calculate attendance percentage
 
-4. **Modern UI / आधुनिक यूआई**
+4. **Modern UI 
    - Responsive design
    - Dark/Light mode
    - Smooth animations
 
-## 🚀 Getting Started / शुरू करें
+## 🚀 Getting Started 
+1. Clone the repository
+2. Open `index.html` in your browser
+3. Start managing your employees! 
 
-1. Clone the repository / रिपॉजिटरी को क्लोन करें
-2. Open `index.html` in your browser / ब्राउज़र में `index.html` खोलें
-3. Start managing your employees! / अपने कर्मचारियों का प्रबंधन शुरू करें!
-
-## 💻 Technologies Used / प्रयुक्त तकनीकें
+## 💻 Technologies Used
 
 - HTML5
 - CSS3 (with CSS Variables)
@@ -40,40 +39,38 @@ A modern, responsive Employee Management System built with HTML, CSS, and JavaSc
 - LocalStorage for data persistence
 - Font Awesome for icons
 
-## 📱 Responsive Design / रेस्पॉन्सिव डिज़ाइन
+## 📱 Responsive Design 
 
 The application is fully responsive and works on:
 - Desktop computers
 - Tablets
 - Mobile phones
 
-## 🌓 Dark Mode / डार्क मोड
+## 🌓 Dark Mode 
 
 Toggle between light and dark themes. Your preference is saved in localStorage.
 
-## 🔒 Data Storage / डेटा स्टोरेज
-
+## 🔒 Data Storage 
 All data is stored in the browser's localStorage, making it:
 - Persistent across page reloads
 - Accessible offline
 - Private to your browser
 
-## 🛠️ Browser Support / ब्राउज़र सपोर्ट
-
+## 🛠️ Browser Support
 Works on all modern browsers:
 - Chrome
 - Firefox
 - Safari
 - Edge
 
-## 📝 License / लाइसेंस
+## 📝 License
 
 This project is open source and available under the MIT License.
 
-## 🤝 Contributing / योगदान
+## 🤝 Contributing 
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
 ---
 
-Made with ❤️ by [Your Name] 
+
